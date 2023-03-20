@@ -1,0 +1,77 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <title>4 Player Battleship</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg  fixed-top">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            
+            <div class="navbar-nav">
+                <a class="nav-link" href="./#home"> <strong>Home</strong></a>
+                <a class="nav-link" href="locus.html"><strong>Locus</strong></a>
+                <a class="nav-link" href="lotte.html"><strong>Lotte</strong></a>
+                <a class="nav-link" href="time.html"><strong>Time Stop</strong></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div class="project-title">
+        <h1>4 Player Battleship</h1>
+    </div>
+    <div class="project-subtitle">
+        <p>A multiplayer version of the popular board game using TCP networking, implented
+            using the Python module Pygame
+        </p>
+    </div>   
+    <div class="project-overview">
+        <h1>Overview</h1>
+    </div>
+    <div class="project-overview-subtitle">
+        <img class="bship-photo1 proj-photo" src="css/images/bship-place.png" alt="">
+        <p>The main point of creating this project was to create a multiplayer application using
+            networking. At the time, I was also learning a little about Pygame and took the opportunity
+            to use what I learned with both. I ran the server from my computer and receievd connections 
+            from 4 different clients. The server keeps count of the clients and once the number of connections
+            was 4, would send a signal to all users to begin the game. The order of the game was randomized
+            and the server would wait for the action from the player whose turn it was. 
+        </p>
+        <img class="bship-photo2 proj-photo" src="css/images/bship-game.png" alt="">
+        <p class="bship-pt2">On the client side, once they connected to the server, they are first 
+            prompted to type out the name that will be displayed to other users. After that they created
+            their board layout. Compared to the original game, this version was on a smaller grid and only
+            had 3 boats per player. This was to prevent making the game last too long. Once all players created
+            their boards, the game would start and the player would see their own board and 3 blank boards
+            to represent the other users. The player whose turn it was, is displayed in the window and the game
+            only reacts once that player makes a move. The server then checks the grid location of the picked board
+            and returns to all the users whether the move was a hit or not. Once a player lost all of their ships,
+            they were no longer in the rotation for playing and could only spectate. Once a winner was found, the 
+            server sent the winning player's name to the users and the game closed shortly after.
+        </p>
+    </div>
+    <footer class="footer-main">
+        <table class="foot-table">
+          <tr>
+            <td><a href="https://www.linkedin.com/in/jon-okawa/"><img class="foot-photo" src="css/images/linkedin.png" alt=""></a></td>
+            <td><a href="https://github.com/Oka-Jon"><img class="foot-photo" src="css/images/git.png" alt=""></a></td>
+          </tr>
+        </table>
+        <hr class="foot-hr">
+        <p class="footer-text-bottom">Designed and Created by Jon Okawa</p>
+        
+  </footer>
+</body>
+</html>

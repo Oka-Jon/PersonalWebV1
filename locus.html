@@ -1,0 +1,72 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <title>Locus</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg  fixed-top">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            
+            <div class="navbar-nav">
+              <a class="nav-link" href="./#home"> <strong>Home</strong></a>
+              <a class="nav-link" href="lotte.html"><strong>Lotte</strong></a>
+              <a class="nav-link" href="bship.html"><strong>Battleship</strong></a>
+              <a class="nav-link" href="time.html"><strong>Time Stop</strong></a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    <div class="project-title">
+        <h1>Locus Bluetooth Locator</h1>
+    </div>
+    <div class="project-subtitle">
+        <p>By measuring the signal strength emitted from Bluetooth devices, triangulate 
+            and precisely determine your location. 
+        </p>
+    </div>   
+    <div class="project-overview">
+        <h1>Overview</h1>
+    </div>
+    <div class="project-overview-subtitle">
+        <img class="locus-photo1 proj-photo" src="css/images/locus_trian.png" alt="">
+        <p>Locus was created with the intention of solving the problem of indoor navigation. GPS struggles
+            to work accurately indoors because the signals from the satellites are easily interfered with. For our 
+            Bluetooth signal, we wanted to use Bluetooth Low Energy 5.1 as it consumed less battery to use
+            while still emitting singlas at a useful range. We used the micro:bit V2 board as it met our hardware needs
+            while having a small body and being inexpensive.
+        </p>
+        <img class="locus-photo2 proj-photo" src="css/images/locus_screen.png" alt="">
+        <p class="locus-pt2">By using our phone's built in Bluetooth scanner, we can receive signals from multiple devices and 
+            measure the signal strength. With our application, we took the 3 strongest signals and by use of an equation,
+            we were able to calculate the distance from our phone to each device. We can interpret these distances as the radius
+            of a circle around the Bluetooth emitter. When we have the 3 circles to represent our 3 distances, the final step visually
+            would be to look for the intersection of all the circles. To do this, we imagine plotting each device on a grid
+            and getting (x,y) positions for each, then by using triangulation, we can accurately plot our current position on the same grid.
+        </p>
+    </div>
+    <footer class="footer-main">
+      <table class="foot-table">
+        <tr>
+          <td><a href="https://www.linkedin.com/in/jon-okawa/"><img class="foot-photo" src="css/images/linkedin.png" alt=""></a></td>
+          <td><a href="https://github.com/Oka-Jon"><img class="foot-photo" src="css/images/git.png" alt=""></a></td>
+        </tr>
+      </table>
+      <hr class="foot-hr">
+      <p class="footer-text-bottom">Designed and Created by Jon Okawa</p>
+      
+</footer>
+</body>
+</html>
